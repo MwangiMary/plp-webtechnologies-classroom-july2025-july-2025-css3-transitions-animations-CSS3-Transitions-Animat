@@ -1,0 +1,61 @@
+/* General styling */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 50px;
+}
+
+/* Part 1: Button hover effect */
+#animateBtn {
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background: #4cafef;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s;
+}
+
+#animateBtn:hover {
+  transform: scale(1.1);
+  background: #0077cc;
+}
+
+/* Animated box */
+#box {
+  width: 100px;
+  height: 100px;
+  margin: 30px auto;
+  background: coral;
+  transition: transform 1s ease;
+}
+
+/* Animate via JS */
+.move {
+  transform: translateX(200px) rotate(180deg);
+}
+
+/* Popup modal */
+#popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background: white;
+  border: 2px solid #333;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.3);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+#popup.show {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+.hidden {
+  display: none;
+}
